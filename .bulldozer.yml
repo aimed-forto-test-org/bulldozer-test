@@ -1,0 +1,13 @@
+# "version" is the configuration version, currently "1".
+version: 1
+
+# "merge" defines how and when pull requests are merged. If the section is
+# missing, bulldozer will consider all pull requests and use default settings.
+merge:
+  # "trigger" defines the set of pull requests considered by bulldozer. If
+  # the section is missing, bulldozer considers all pull requests not excluded
+  # by the ignore conditions.
+  trigger:
+    # Pull requests with any of these labels (case-insensitive) are added to
+    # the trigger.
+    labels: ["merge"]
