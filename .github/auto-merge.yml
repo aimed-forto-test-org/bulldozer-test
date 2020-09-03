@@ -1,12 +1,23 @@
-requiredReviewers:
-- aimed
+
+# Configuration for probot-auto-merge - https://github.com/bobvanderlinden/probot-auto-merge
 
 updateBranch: true
-mergeMethod: merge
+deleteBranchAfterMerge: true
 reportStatus: true
 
-requiredBaseBranches:
-- master
-
+minApprovals:
+  COLLABORATOR: 0
+maxRequestedChanges:
+  NONE: 0
 blockingLabels:
 - blocked
+
+# Will merge whenever the above conditions are met, but also
+# the owner has approved or merge label was added.
+rules:
+- minApprovals:
+    OWNER: 1
+- requiredLabels:
+  - merge
+
+mergeCommitMessage: "{title} (#{number})"
