@@ -1,0 +1,12 @@
+requiredReviewers:
+- aimed
+
+updateBranch: true
+
+mergeMethod: merge
+
+requiredBaseBranches:
+- master
+
+blockingLabels:
+- blocked
