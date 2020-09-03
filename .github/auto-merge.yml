@@ -2,8 +2,8 @@ requiredReviewers:
 - aimed
 
 updateBranch: true
-
 mergeMethod: merge
+reportStatus: true
 
 requiredBaseBranches:
 - master
