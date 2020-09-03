@@ -11,3 +11,7 @@ merge:
     # Pull requests with any of these labels (case-insensitive) are added to
     # the trigger.
     labels: ["merge"]
+  method: squash
+  options:
+    squash:
+      body: summarize_commits
